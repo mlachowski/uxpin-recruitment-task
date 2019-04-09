@@ -16,7 +16,7 @@ const App = () => (
         <Layout>
             <Route
                 exact
-                path={ routeConstants.INDEX_ROUTE( ":id?", ":step?" ) }
+                path={ routeConstants.INDEX_ROUTE( ":id?" ) }
                 component={ Main }
             />
         </Layout>
