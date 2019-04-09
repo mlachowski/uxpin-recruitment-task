@@ -41,7 +41,6 @@ class MainContainer extends React.Component<Props, State> {
     getStep( userId ) {
         axios.get( `${ API_URL }user/${ userId }` )
             .then( response => {
-                console.log(response);
                 if( response.data === "User not found" ) {
                     this.createUser( userId );
                     this.setState( {
@@ -66,7 +65,7 @@ class MainContainer extends React.Component<Props, State> {
             id,
             step: firstStep,
         } );
-        return userId;
+        return id;
     }
 
     goToNextStep() {
